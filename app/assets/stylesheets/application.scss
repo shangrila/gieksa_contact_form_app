@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+$bg: 'bF31y55.png';
+$form-bg: #f8f4e5;
+$form-shadow: #33cc66;
+$form-primary-highlight: #fff22d;
+$form-secondary-highlight: #ffc8ff;
+$font-size: 14pt;
+$font-face: 'Fjalla One';
+$font-face2: 'Lato';
+$font-color: #2A293E;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url($bg) center center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact-us {
+  background: $form-bg;
+  padding: 50px 100px;
+  border: 2px solid rgba(0,0,0,1);
+  box-shadow: 15px 15px 1px $form-shadow, 15px 15px 1px 2px rgba(0,0,0,1);
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  font-size: $font-size;
+  line-height: $font-size * 2;
+  font-family: $font-face;
+  margin-bottom: $font-size * 2;
+  border: none;
+  border-bottom: 5px solid rgba(0,0,0,1);
+  background: $form-bg;
+  min-width: 250px;
+  padding-left: 5px;
+  outline: none;
+  color: rgba(0,0,0,1);
+}
+
+input:focus, textarea:focus {
+  border-bottom: 5px solid $form-shadow;
+}
+
+h2 {
+  font-family: $font-face;
+  font-size: $font-size * 1.5;
+  color: $font-color;
+  margin: $font-size * 2 0 $font-size;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 420px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -1px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+i.question-mark {
+  font-family: $font-face2;
+  font-size: 1rem;
+  color: $font-color;
+  background-color: $form-shadow;
+  border-radius: 50%;
+  width: $font-size * 1.5;
+  height: $font-size * 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  line-height: $font-size * 2;
+  padding: 0 20px;
+  background: $form-shadow;
+  letter-spacing: 2px;
+  transition: .2s all ease-in-out;
+  outline: none;
+  border: 1px solid rgba(0,0,0,1);
+  box-shadow: 3px 3px 1px 1px $form-primary-highlight, 3px 3px 1px 2px rgba(0,0,0,1);
+
+  &:hover {
+    background: rgba(0,0,0,1);
+    color: white;
+    border: 1px solid rgba(0,0,0,1);
+  }
+}
+
+::selection {
+  background: $form-secondary-highlight;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  border-bottom: 5px solid $form-primary-highlight;
+  -webkit-text-fill-color: $font-color;
+  -webkit-box-shadow: 0 0 0px 1000px $form-bg inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

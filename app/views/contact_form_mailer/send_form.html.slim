@@ -1,8 +1,42 @@
-p Imię i nazwisko: = @contact_form[:name]
-p PESEL: = @contact_form[:pesel]
-p Email: = @contact_form[:email]
-p Telefon: = @contact_form[:phone]
-p Jak nam możesz pomóc?: = @contact_form[:message]
-p Dzielnica: = @contact_form[:district]
-p Polecający z SK1964: = @contact_form[:referrer]
-p Nick z ForumGieKSy: = @contact_form[:forum_nickname]
+doctype html
+html
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    style
+      | /* Email styles need to be inline */
+  body
+    p
+      | Imię i nazwisko: 
+      = @contact_form[:name]
+    p
+      | PESEL: 
+      = @contact_form[:pesel]
+    p
+      | Email: 
+      = @contact_form[:email]
+    p
+      | Telefon: 
+      = @contact_form[:phone]
+    p
+      | Jak nam możesz pomóc?: 
+      = @contact_form[:message]
+    p
+      | Dzielnica: 
+      = @contact_form[:district]
+    p
+      | Polecający z SK1964: 
+      = @contact_form[:referrer]
+    p
+      | Nick z ForumGieKSy: 
+      = @contact_form[:forum_nickname]
+
+
+/ p Imię i nazwisko: = @contact_form[:name]
+/ p PESEL: = @contact_form[:pesel]
+/ p Email: = @contact_form[:email]
+/ p Telefon: = @contact_form[:phone]
+/ p Jak nam możesz pomóc?: = @contact_form[:message]
+/ p Dzielnica: = @contact_form[:district]
+/ p Polecający z SK1964: = @contact_form[:referrer]
+/ p Nick z ForumGieKSy: = @contact_form[:forum_nickname]
+

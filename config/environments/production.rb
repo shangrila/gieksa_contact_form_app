@@ -92,13 +92,13 @@ Rails.application.configure do
   
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
+  address:              'smtp.fastmail.com',
   port:                 587,
-  domain:               'gmail.com',
-  user_name:            '<your_email>',
-  password:             '<your_password>',
+  domain:               'ebikon.ro',
+  user_name:            'ping@ebikon.ro',
+  password:             '822n5h9t534r2d2q',
   authentication:       'plain',
   enable_starttls_auto: true 
 }
-config.action_mailer.default_url_options = { host: 'your_production_host' }
+config.action_mailer.default_url_options = { host: '127.0.0.1' }
 end

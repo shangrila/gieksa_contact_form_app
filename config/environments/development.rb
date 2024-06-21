@@ -74,9 +74,9 @@ Rails.application.configure do
 config.action_mailer.smtp_settings = {
   address:              'smtp.fastmail.com',
   port:                 587,
-  domain:               'ebikon.ro',
-  user_name:            'ping@ebikon.ro',
-  password:             '822n5h9t534r2d2q',
+  domain:               '',
+  user_name:            '',
+  password:             '',
   authentication:       'plain',
   enable_starttls_auto: true 
 }

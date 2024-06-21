@@ -3,14 +3,28 @@
   <head>
     <title>GieksaContactFormApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-gnAQEKQR99JQbN5m2zowNvBf9lEL7Y3jpzvSXP+j30Tun1AxKp+6GpZkC2O/g86NkzLXQRr3q2sEuAWhnSCShA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
+    <script>
+      function hideAlert() {
+        var alertElement = document.getElementById('alert');
+        alertElement.style.display = 'none';
+      }
+      setTimeout(hideAlert, 5000); // 5000 milliseconds = 5 seconds
+    </script>
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div id="alert" class="alert alert-success" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
